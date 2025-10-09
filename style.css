@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #f9f9f9, #e0f7fa);
+  color: #333;
+}
+
+header {
+  background-color: #101828;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(90deg, #444ce7, #00d084);
+  color: white;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #101828;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.classes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #444ce7;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 120px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card a {
+  text-decoration: none;
+  color: #444ce7;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #101828;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
