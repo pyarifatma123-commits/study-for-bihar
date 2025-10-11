@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Updates – Bihar Board</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    header, footer {
+      background-color: #2e3b4e;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    #searchBox {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .card {
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #2e3b4e;
+    }
+    .card p {
+      margin: 10px 0;
+    }
+    .card a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+    footer p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Study for Bihar Exams</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="updates.html">Updates</a>
+    </nav>
+  </header>
+
+  <main>
+    <input type="text" id="searchBox" placeholder="Search updates..." onkeyup="filterCards()" />
+
+    <div id="cardsContainer">
+      <div class="card">
+        <h3>Latest Update</h3>
+        <p>Class 12 Chemistry notes uploaded. <a href="#">View PDF</a></p>
+      </div>
+      <div class="card">
+        <h3>BSEB Update</h3>
+        <p>BSEB released new syllabus for 2025. <a href="#">Check here</a></p>
+      </div>
+      <div class="card">
+        <h3>Result</h3>
+        <p>Class 10 result declared. <a href="#">View Result</a></p>
+      </div>
+      <div class="card">
+        <h3>Admit Card</h3>
+        <p>Class 12 admit card available. <a href="#">Download Now</a></p>
+      </div>
+      <div class="card">
+        <h3>Model Paper</h3>
+        <p>Class 11 model papers added. <a href="#">View Papers</a></p>
+      </div>
+      <div class="card">
+        <h3>Scholarship</h3>
+        <p>Apply for Bihar student scholarship. <a href="#">Apply Here</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      Hello दोस्तों आपलोगों का हमारे ऑफिसियल वेबसाइट पर बहुत-बहुत स्वागत है। दोस्तों हमारे इस वेबसाइट पर Class 8th, 9th, 10th, 11th And 12th का नोट्स दिया जाता है और स्कूल या कॉलेज का Daily Update सही और सटीक बिलकुल विश्लेषण के साथ बताया जाता है आपके लिए Bihar board और other Exam.. से जुड़े Tips & Trick, New अपडेट, Sarkari Yojna, Admission का पोस्ट लाने की कोशिश करूंगा। जिसमें कि मुझे आपलोगों की Support और प्यार की जरूरत है। इसलिए देखते रहे मेरे वीडियो को और वीडियो पसंद आती है तो Like और Share • जरूर करें और ऐसे ही वीडियो देखने के लिए अपने इस चैनल को Subscribe कर के घंटी को दबा दें। धन्यवाद
+    </p>
+  </footer>
+
+  <script>
+    function filterCards() {
+      const input = document.getElementById("searchBox").value.toLowerCase();
+      const cards = document.querySelectorAll(".card");
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
