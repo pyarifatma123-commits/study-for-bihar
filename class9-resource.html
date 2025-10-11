@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 9th Resources – Study for Bihar Exams</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #2e3b4e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    header p {
+      margin: 5px 0;
+      font-size: 18px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 40px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      color: #2e3b4e;
+      margin-top: 0;
+    }
+    .subject-btn, .chapter-btn {
+      display: inline-block;
+      margin: 5px 10px 5px 0;
+      padding: 8px 12px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .subject-btn:hover, .chapter-btn:hover {
+      background-color: #005fa3;
+    }
+    .hidden {
+      display: none;
+    }
+    .content-box {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #eef;
+      border-radius: 5px;
+    }
+    .download-card {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #dff0d8;
+      border: 1px solid #b2dba1;
+      border-radius: 5px;
+    }
+    .download-card a {
+      color: #2e3b4e;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Study for Bihar Exams</h1>
+    <p>आप Class 9th में है</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="new.html">New Update</a>
+      <a href="class10.html">Class 10th</a>
+      <a href="class11.html">Class 11th</a>
+      <a href="class12.html">Class 12th</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Objective Section -->
+    <section>
+      <h2>🎯 Objective</h2>
+      <div>
+        <span class="subject-btn" onclick="showChapters('objective', 'hindi')">हिंदी</span>
+        <span class="subject-btn" onclick="showChapters('objective', 'science')">Science</span>
+      </div>
+      <div id="objective-hindi-chapters" class="hidden">
+        <span class="chapter-btn" onclick="showContent('objective', 'hindi', 'ch2')">Chapter 2</span>
+      </div>
+      <div id="objective-science-chapters" class="hidden">
+        <span class="chapter-btn" onclick="showContent('objective', 'science', 'ch1')">Chapter 1</span>
+      </div>
+      <div id="objective-hindi-ch2-content" class="content-box hidden">
+        <p><strong>हिंदी Chapter 2 Objective:</strong> यहाँ पर आप manually लिख सकते हैं या paste कर सकते हैं।</p>
+        <div class="download-card">
+          <a href="https://yourgithub.com/class9-hindi-ch2-objective.pdf" target="_blank">📥 Download PDF</a>
+        </div>
+      </div>
+      <div id="objective-science-ch1-content" class="content-box hidden">
+        <p><strong>Science Chapter 1 Objective:</strong> यहाँ पर आप manually लिख सकते हैं या paste कर सकते हैं।</p>
+        <div class="download-card">
+          <a href="https://yourgithub.com/class9-science-ch1-objective.pdf" target="_blank">📥 Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subjective Section -->
+    <section>
+      <h2>📝 Subjective</h2>
+      <!-- Same structure as Objective -->
+    </section>
+
+    <!-- Books Section -->
+    <section>
+      <h2>📚 Books</h2>
+      <!-- You can add book images and links here -->
+    </section>
+
+  </main>
+
+  <script>
+    function showChapters(section, subject) {
+      document.querySelectorAll(`#${section}-${subject}-chapters`).forEach(el => el.classList.remove('hidden'));
+    }
+
+    function showContent(section, subject, chapter) {
+      document.querySelectorAll('.content-box').forEach(el => el.classList.add('hidden'));
+      document.getElementById(`${section}-${subject}-${chapter}-content`).classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
