@@ -108,11 +108,11 @@
   <section>
     <h2>🎯 Objective</h2>
     <div id="objective-subjects">
+      <button onclick="selectSubject('objective','math')">Math</button> 
       <button onclick="selectSubject('objective','hindimil')">Hindi MIL</button>
       <button onclick="selectSubject('objective','hindisil')">Hindi SIL</button>
       <button onclick="selectSubject('objective','urdu')">Urdu</button>
-      <button onclick="selectSubject('objective','english')">English</button>
-      <button onclick="selectSubject('objective','math')">Math</button>
+      <button onclick="selectSubject('objective','english')">English</button>    
       <button onclick="selectSubject('objective','sanskrit')">Sanskrit</button>
       <button onclick="selectSubject('objective','biology')">Biology</button>
       <button onclick="selectSubject('objective','chemistry')">Chemistry</button>
@@ -131,11 +131,11 @@
   <section>
     <h2>📝 Subjective</h2>
     <div id="subjective-subjects">
-      <button onclick="selectSubject('subjective','hindimil')">Hindi MIL</button>
+      <button onclick="selectSubject('subjective','math')">Math</button>
       <button onclick="selectSubject('subjective','hindisil')">Hindi SIL</button>
       <button onclick="selectSubject('subjective','urdu')">Urdu</button>
       <button onclick="selectSubject('subjective','english')">English</button>
-      <button onclick="selectSubject('subjective','math')">Math</button>
+      <button onclick="selectSubject('subjective','hindimil')">Hindi MIL</button>
       <button onclick="selectSubject('subjective','sanskrit')">Sanskrit</button>
       <button onclick="selectSubject('subjective','biology')">Biology</button>
       <button onclick="selectSubject('subjective','chemistry')">Chemistry</button>
@@ -154,11 +154,11 @@
   <section>
     <h2>📚 Books</h2>
     <div id="books-subjects">
+     <button onclick="selectSubject('books','math')">Math</button> 
       <button onclick="selectSubject('books','hindimil')">Hindi MIL</button>
       <button onclick="selectSubject('books','hindisil')">Hindi SIL</button>
       <button onclick="selectSubject('books','urdu')">Urdu</button>
       <button onclick="selectSubject('books','english')">English</button>
-      <button onclick="selectSubject('books','math')">Math</button>
       <button onclick="selectSubject('books','sanskrit')">Sanskrit</button>
       <button onclick="selectSubject('books','biology')">Biology</button>
       <button onclick="selectSubject('books','chemistry')">Chemistry</button>
@@ -177,25 +177,25 @@
   
  <script>
   const subjects = {
-    hindiMil: 17, hindisil: 10, english: 21, math: 15, urdu: 15, sanskrit: 10,
+   math: 15,   hindiMil: 17, hindisil: 10, english: 21, urdu: 15, sanskrit: 10,
     biology: 5, chemistry: 5, physics: 4, geography: 6, history: 5, politicalscience: 5, economics: 4
   };
 
   const content = {
     objective: {
-      hindimil: {
-        ch1: "hindi chPTER 1 ME APPKA SAGATT HAI।",
+       math: {
+        ch1: "bas thora intezaar karen",
+               "bas thora intezaar karen"
         ch2: "HINDI CHAPTER 2 ME AAPKA SWAGAT HAI।"
         // बाकी chapters इसी format में जोड़ो
       }
     },
     subjective: {
-      hindimil: {
-        ch1: "यहाँ हिंदी Subjective Chapter 1 का content होगा।"
-      }
+      math: {
+        ch1: "hlo friends wait for loading...",
     },
     books: {
-      hindimil: {
+       math: {
         ch1: "<img src='https://yourgithub.com/class11-hindi-book.jpg' width='200'><br>हिंदी किताब PDF नीचे से डाउनलोड करें।"
       }
     }
@@ -259,3 +259,4 @@
 </body>
 
 </html>
+
