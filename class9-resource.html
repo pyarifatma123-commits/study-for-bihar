@@ -99,57 +99,119 @@
 
   <main>
 
-    <!-- Objective Section -->
-    <section>
-      <h2>🎯 Objective</h2>
-      <div>
-        <span class="subject-btn" onclick="showChapters('objective', 'hindi')">हिंदी</span>
-        <span class="subject-btn" onclick="showChapters('objective', 'science')">Science</span>
-      </div>
-      <div id="objective-hindi-chapters" class="hidden">
-        <span class="chapter-btn" onclick="showContent('objective', 'hindi', 'ch2')">Chapter 2</span>
-      </div>
-      <div id="objective-science-chapters" class="hidden">
-        <span class="chapter-btn" onclick="showContent('objective', 'science', 'ch1')">Chapter 1</span>
-      </div>
-      <div id="objective-hindi-ch2-content" class="content-box hidden">
-        <p><strong>हिंदी Chapter 2 Objective:</strong> यहाँ पर आप manually लिख सकते हैं या paste कर सकते हैं।</p>
-        <div class="download-card">
-          <a href="https://yourgithub.com/class9-hindi-ch2-objective.pdf" target="_blank">📥 Download PDF</a>
-        </div>
-      </div>
-      <div id="objective-science-ch1-content" class="content-box hidden">
-        <p><strong>Science Chapter 1 Objective:</strong> यहाँ पर आप manually लिख सकते हैं या paste कर सकते हैं।</p>
-        <div class="download-card">
-          <a href="https://yourgithub.com/class9-science-ch1-objective.pdf" target="_blank">📥 Download PDF</a>
-        </div>
-      </div>
-    </section>
+    <!-- 🎯 Objective Section -->
+  <section>
+    <h2>🎯 Objective</h2>
+    <div id="objective-subjects">
+      <button onclick="selectSubject('objective','hindi')">हिंदी</button>
+      <button onclick="selectSubject('objective','english')">English</button>
+      <button onclick="selectSubject('objective','math')">Math</button>
+      <button onclick="selectSubject('objective','social')">Social Science</button>
+      <button onclick="selectSubject('objective','sanskrit')">Sanskrit</button>
+      <button onclick="selectSubject('objective','biology')">Biology</button>
+      <button onclick="selectSubject('objective','chemistry')">Chemistry</button>
+      <button onclick="selectSubject('objective','physics')">Physics</button>
+    </div>
+    <div id="objective-chapters" style="margin-top:10px;"></div>
+    <div id="objective-content" style="margin-top:10px;"></div>
+  </section>
 
-    <!-- Subjective Section -->
-    <section>
-      <h2>📝 Subjective</h2>
-      <!-- Same structure as Objective -->
-    </section>
+  <!-- 📝 Subjective Section -->
+  <section>
+    <h2>📝 Subjective</h2>
+    <div id="subjective-subjects">
+      <button onclick="selectSubject('subjective','hindi')">हिंदी</button>
+      <button onclick="selectSubject('subjective','english')">English</button>
+      <button onclick="selectSubject('subjective','math')">Math</button>
+      <button onclick="selectSubject('subjective','social')">Social Science</button>
+      <button onclick="selectSubject('subjective','sanskrit')">Sanskrit</button>
+      <button onclick="selectSubject('subjective','biology')">Biology</button>
+      <button onclick="selectSubject('subjective','chemistry')">Chemistry</button>
+      <button onclick="selectSubject('subjective','physics')">Physics</button>
+    </div>
+    <div id="subjective-chapters" style="margin-top:10px;"></div>
+    <div id="subjective-content" style="margin-top:10px;"></div>
+  </section>
 
-    <!-- Books Section -->
-    <section>
-      <h2>📚 Books</h2>
-      <!-- You can add book images and links here -->
-    </section>
+  <!-- 📚 Books Section -->
+  <section>
+    <h2>📚 Books</h2>
+    <div id="books-subjects">
+      <button onclick="selectSubject('books','hindi')">हिंदी</button>
+      <button onclick="selectSubject('books','english')">English</button>
+      <button onclick="selectSubject('books','math')">Math</button>
+      <button onclick="selectSubject('books','social')">Social Science</button>
+      <button onclick="selectSubject('books','sanskrit')">Sanskrit</button>
+      <button onclick="selectSubject('books','biology')">Biology</button>
+      <button onclick="selectSubject('books','chemistry')">Chemistry</button>
+      <button onclick="selectSubject('books','physics')">Physics</button>
+    </div>
+    <div id="books-chapters" style="margin-top:10px;"></div>
+    <div id="books-content" style="margin-top:10px;"></div>
+  </section>
 
-  </main>
-
+</main>
+  
   <script>
-    function showChapters(section, subject) {
-      document.querySelectorAll(`#${section}-${subject}-chapters`).forEach(el => el.classList.remove('hidden'));
-    }
+  const subjects = {
+    hindi: 15, english: 15, math: 15, social: 15, sanskrit: 15,
+    biology: 15, chemistry: 15, physics: 15
+  };
 
-    function showContent(section, subject, chapter) {
-      document.querySelectorAll('.content-box').forEach(el => el.classList.add('hidden'));
-      document.getElementById(`${section}-${subject}-${chapter}-content`).classList.remove('hidden');
+  const content = {
+    objective: {
+      hindi: {
+        ch1: "यहाँ हिंदी Objective Chapter 1 का content होगा।",
+        ch2: "यहाँ हिंदी Objective Chapter 2 का content होगा।"
+        // बाकी chapters इसी format में जोड़ो
+      }
+    },
+    subjective: {
+      hindi: {
+        ch1: "यहाँ हिंदी Subjective Chapter 1 का content होगा।"
+      }
+    },
+    books: {
+      hindi: {
+        ch1: "<img src='https://yourgithub.com/class9-hindi-book.jpg' width='200'><br>हिंदी किताब PDF नीचे से डाउनलोड करें।"
+      }
     }
-  </script>
+  };
 
+  function selectSubject(section, subject) {
+    const chapterDiv = document.getElementById(`${section}-chapters`);
+    const contentDiv = document.getElementById(`${section}-content`);
+    chapterDiv.innerHTML = "";
+    contentDiv.innerHTML = "";
+    for (let i = 1; i <= subjects[subject]; i++) {
+      const btn = document.createElement("button");
+      btn.textContent = `Chapter ${i}`;
+      btn.onclick = () => showContent(section, subject, i);
+      chapterDiv.appendChild(btn);
+    }
+  }
+
+  function showContent(section, subject, chapterNum) {
+    const key = `ch${chapterNum}`;
+    const data = content?.[section]?.[subject]?.[key];
+    const text = data || "इस अध्याय का कंटेंट अभी उपलब्ध नहीं है।";
+    const downloadLink = `https://yourgithub.com/class9-${subject}-ch${chapterNum}-${section}.pdf`;
+    const contentDiv = document.getElementById(`${section}-content`);
+    contentDiv.innerHTML = `
+      <div style="background:#eef; padding:15px; border-radius:5px;">
+        <p><strong>${capitalize(subject)} Chapter ${chapterNum} (${capitalize(section)}):</strong></p>
+        <div>${text}</div>
+        <div style="margin-top:10px; background:#dff0d8; padding:10px; border-radius:5px;">
+          <a href="${downloadLink}" target="_blank">📥 Download PDF</a>
+        </div>
+      </div>
+    `;
+  }
+
+  function capitalize(text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  }
+</script>
 </body>
+
 </html>
