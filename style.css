@@ -19,9 +19,10 @@ header h1 {
 }
 
 nav a {
-  color: #ff1744; /* neon red */
-  text-shadow: 0 0 5px #ff1744;
-  font-size: 10px;
+  margin: 0 1rem;
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .hero {
@@ -35,7 +36,7 @@ nav a {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   background-color: #101828;
-  color: white;
+  color: deep blue;
   text-decoration: none;
   border-radius: 5px;
   margin-top: 1rem;
@@ -115,6 +116,7 @@ footer {
   color: #2e3b4e;
   font-size: 16px;
 }
+
 
 
 
