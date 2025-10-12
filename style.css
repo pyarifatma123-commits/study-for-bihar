@@ -13,17 +13,16 @@ header {
 }
 
 header h1 {
+  color: #00ffcc;
+  text-shadow: 0 0 5px #00ffcc;
+  font-family: 'Courier New', monospace;
+}
+
+nav a {
   color: #ff1744; /* neon red */
   text-shadow: 0 0 5px #ff1744;
   font-family: 'Courier New', monospace;
   font-size: 30px;
-}
-
-nav a {
-  margin: 0 1rem;
-  color: blue;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 .hero {
@@ -117,5 +116,6 @@ footer {
   color: #2e3b4e;
   font-size: 16px;
 }
+
 
 
