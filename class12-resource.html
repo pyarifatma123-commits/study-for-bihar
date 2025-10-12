@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 12th Resources – Study for Bihar Exams</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #2e3b4e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    header p {
+      margin: 5px 0;
+      font-size: 18px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 40px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      color: #2e3b4e;
+      margin-top: 0;
+    }
+    .subject-btn, .chapter-btn {
+      display: inline-block;
+      margin: 5px 10px 5px 0;
+      padding: 8px 12px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .subject-btn:hover, .chapter-btn:hover {
+      background-color: #005fa3;
+    }
+    .hidden {
+      display: none;
+    }
+    .content-box {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #eef;
+      border-radius: 5px;
+    }
+    .download-card {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #dff0d8;
+      border: 1px solid #b2dba1;
+      border-radius: 5px;
+    }
+    .download-card a {
+      color: #2e3b4e;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    footer p {
+     font-size: 14px;
+     line-height: 1.6;
+     margin: 0;
+     padding: 10px;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Study for Bihar Exams</h1>
+    <p>आप Class 12th के Page पर है</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="new.html">New Update</a>
+      <a href="class10.html">10th</a>
+      <a href="class11.html">11th</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 🎯 Objective Section -->
+  <section>
+    <h2>🎯 Objective</h2>
+    <div id="objective-subjects">
+      <button onclick="selectSubject('objective','hindimil')">Hindi MIL</button>
+      <button onclick="selectSubject('objective','hindisil')">Hindi SIL</button>
+      <button onclick="selectSubject('objective','urdu')">Urdu</button>
+      <button onclick="selectSubject('objective','english')">English</button>
+      <button onclick="selectSubject('objective','math')">Math</button>
+      <button onclick="selectSubject('objective','sanskrit')">Sanskrit</button>
+      <button onclick="selectSubject('objective','biology')">Biology</button>
+      <button onclick="selectSubject('objective','chemistry')">Chemistry</button>
+      <button onclick="selectSubject('objective','physics')">Physics</button>
+      <button onclick="selectSubject('objective','history')">History</button>
+      <button onclick="selectSubject('objective','politicalscience')">Political Science</button>
+      <button onclick="selectSubject('objective','economics')">Economics</button>
+      <button onclick="selectSubject('objective','geography')">Geography</button>
+
+    </div>
+    <div id="objective-chapters" style="margin-top:10px;"></div>
+    <div id="objective-content" style="margin-top:10px;"></div>
+  </section>
+
+  <!-- 📝 Subjective Section -->
+  <section>
+    <h2>📝 Subjective</h2>
+    <div id="subjective-subjects">
+      <button onclick="selectSubject('subjective','hindimil')">Hindi MIL</button>
+      <button onclick="selectSubject('subjective','hindisil')">Hindi SIL</button>
+      <button onclick="selectSubject('subjective','urdu')">Urdu</button>
+      <button onclick="selectSubject('subjective','english')">English</button>
+      <button onclick="selectSubject('subjective','math')">Math</button>
+      <button onclick="selectSubject('subjective','sanskrit')">Sanskrit</button>
+      <button onclick="selectSubject('subjective','biology')">Biology</button>
+      <button onclick="selectSubject('subjective','chemistry')">Chemistry</button>
+      <button onclick="selectSubject('subjective','physics')">Physics</button>
+      <button onclick="selectSubject('subjective','history')">History</button>
+      <button onclick="selectSubject('subjective','politicalscience')">Political Science</button>
+      <button onclick="selectSubject('subjective','economics')">Economics</button>
+      <button onclick="selectSubject('subjective','geography')">Geography</button>
+
+    </div>
+    <div id="subjective-chapters" style="margin-top:10px;"></div>
+    <div id="subjective-content" style="margin-top:10px;"></div>
+  </section>
+
+  <!-- 📚 Books Section -->
+  <section>
+    <h2>📚 Books</h2>
+    <div id="books-subjects">
+      <button onclick="selectSubject('books','hindimil')">Hindi MIL</button>
+      <button onclick="selectSubject('books','hindisil')">Hindi SIL</button>
+      <button onclick="selectSubject('books','urdu')">Urdu</button>
+      <button onclick="selectSubject('books','english')">English</button>
+      <button onclick="selectSubject('books','math')">Math</button>
+      <button onclick="selectSubject('books','sanskrit')">Sanskrit</button>
+      <button onclick="selectSubject('books','biology')">Biology</button>
+      <button onclick="selectSubject('books','chemistry')">Chemistry</button>
+      <button onclick="selectSubject('books','physics')">Physics</button>
+      <button onclick="selectSubject('books','history')">History</button>
+      <button onclick="selectSubject('books','politicalscience')">Political Science</button>
+      <button onclick="selectSubject('books','economics')">Economics</button>
+      <button onclick="selectSubject('books','geography')">Geography</button>
+
+    </div>
+    <div id="books-chapters" style="margin-top:10px;"></div>
+    <div id="books-content" style="margin-top:10px;"></div>
+  </section>
+
+</main>
+  
+ <script>
+  // सभी subjects और उनके chapter की संख्या
+  const subjects = {
+    math: 15,
+    hindimil: 17,
+    hindisil: 10,
+    urdu: 15,
+    english: 21,
+    sanskrit: 10,
+    biology: 5,
+    chemistry: 5,
+    physics: 4,
+    history: 5,
+    politicalscience: 5,
+    economics: 4,
+    geography: 6,
+  };
+
+  // हर section के लिए content
+  const content = {
+    objective: {
+      math: {
+        ch1: "बस थोड़ा इंतज़ार करें...",
+        ch2: "Objective Math Chapter 2 में आपका स्वागत है।"
+      }
+    },
+    subjective: {
+      math: {
+        ch1: "Hello friends, loading हो रहा है..."
+      }
+    },
+    books: {
+      math: {
+        ch1: "<img src='https://yourgithub.com/class12-hindi-book.jpg' width='200'><br>हिंदी किताब PDF नीचे से डाउनलोड करें।"
+      }
+    }
+  };
+
+  // subject चुनने पर chapter बटन दिखाना
+  function selectSubject(section, subject) {
+    if (!subjects[subject]) {
+      alert("इस विषय की जानकारी उपलब्ध नहीं है।");
+      return;
+    }
+
+    const chapterDiv = document.getElementById(`${section}-chapters`);
+    const contentDiv = document.getElementById(`${section}-content`);
+    chapterDiv.innerHTML = "";
+    contentDiv.innerHTML = "";
+
+    for (let i = 1; i <= subjects[subject]; i++) {
+      const btn = document.createElement("button");
+      btn.className = "chapter-btn";
+      btn.textContent = `Chapter ${i}`;
+      btn.onclick = () => showContent(section, subject, i);
+      chapterDiv.appendChild(btn);
+    }
+  }
+
+  // chapter चुनने पर content और PDF लिंक दिखाना
+  function showContent(section, subject, chapterNum) {
+    const key = `ch${chapterNum}`;
+    const data = content?.[section]?.[subject]?.[key];
+    const text = data || "इस अध्याय का कंटेंट अभी उपलब्ध नहीं है।";
+    const downloadLink = `https://yourgithub.com/class12-${subject}-ch${chapterNum}-${section}.pdf`;
+
+    const contentDiv = document.getElementById(`${section}-content`);
+    contentDiv.innerHTML = `
+      <div class="content-box">
+        <p><strong>${capitalize(subject)} Chapter ${chapterNum} (${capitalize(section)}):</strong></p>
+        <div>${text}</div>
+        <div class="download-card">
+          <a href="${downloadLink}" target="_blank">📥 PDF डाउनलोड करें</a>
+        </div>
+      </div>
+    `;
+  }
+
+  // पहला अक्षर कैपिटल करने के लिए
+  function capitalize(text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  }
+</script>
+
+<footer>
+  <p>
+    Hello दोस्तों आपलोगों का हमारे ऑफिसियल वेबसाइट पर बहुत-बहुत स्वागत है। दोस्तों हमारे इस वेबसाइट पर Class 8th, 9th, 10th, 11th And 12th का नोट्स दिया जाता है और स्कूल या कॉलेज का Daily Update सही और सटीक बिलकुल विश्लेषण के साथ बताया जाता है आपके लिए Bihar board और other Exam.. से जुड़े Tips & Trick, New अपडेट, Sarkari Yojna, Admission का पोस्ट लाने की कोशिश करूंगा। जिसमें कि मुझे आपलोगों की Support और प्यार की जरूरत है। धन्यवाद
+  </p>
+</footer>
+
+<section style="background-color:#f0f0f0; padding:20px; border-top:2px solid #ccc;">
+  <h2 style="color:#2e3b4e;">📘 हमारे बारे में</h2>
+  <p style="font-size:16px; line-height:1.6;">
+    <strong>Study for Bihar Exams</strong> एक मुफ्त शैक्षणिक वेबसाइट है जो खासतौर पर <strong>Bihar Board</strong> के छात्रों के लिए बनाई गई है। यहाँ पर Class 8th से लेकर 12th तक के लिए हिंदी में नोट्स, अध्यायवार PDF, मॉडल पेपर, रिजल्ट, एडमिट कार्ड, और सरकारी योजनाओं की जानकारी दी जाती है।
+  </p>
+  <p style="font-size:16px; line-height:1.6;">
+    इस वेबसाइट को <strong>Sartaz Alam</strong> द्वारा बनाया गया है, जिन्हें आप प्यार से <strong>SRS</strong> के नाम से जानते हैं 😎। हमारा उद्देश्य है कि हर छात्र को सही, सटीक और मुफ्त जानकारी मिले ताकि वो अपनी पढ़ाई में आगे बढ़ सके।
+  </p>
+  <p style="font-size:16px; line-height:1.6;">
+    अगर आपको यह वेबसाइट पसंद आती है तो इसे अपने दोस्तों के साथ शेयर करें और हमें अपना प्यार और समर्थन दें। जाकारी प्राप्त करने के लिए आप हमसे Contact:8235956404 कर सकते हैं... धन्यवाद 🙏
+  </p>
+</section>
+
+</body>
+
+</html>
