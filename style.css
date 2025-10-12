@@ -21,8 +21,7 @@ header h1 {
 nav a {
   color: #ff1744; /* neon red */
   text-shadow: 0 0 5px #ff1744;
-  font-family: 'Courier New', monospace;
-  font-size: 30px;
+  font-size: 10px;
 }
 
 .hero {
@@ -116,6 +115,7 @@ footer {
   color: #2e3b4e;
   font-size: 16px;
 }
+
 
 
 
