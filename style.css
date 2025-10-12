@@ -12,6 +12,13 @@ header {
   text-align: center;
 }
 
+header h1 {
+  color: #ff1744; /* neon red */
+  text-shadow: 0 0 5px #ff1744;
+  font-family: 'Courier New', monospace;
+  font-size: 30px;
+}
+
 nav a {
   margin: 0 1rem;
   color: blue;
