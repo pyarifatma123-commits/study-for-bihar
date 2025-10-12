@@ -36,7 +36,7 @@ nav a {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   background-color: #101828;
-  color: deep blue;
+  color: red;
   text-decoration: none;
   border-radius: 5px;
   margin-top: 1rem;
@@ -163,3 +163,4 @@ footer {
 .table-link:hover {
   background-color: #2e3b4e;
 }
+
