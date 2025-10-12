@@ -176,58 +176,84 @@
 </main>
   
  <script>
+  // सभी subjects और उनके chapter की संख्या
   const subjects = {
-   math: 15,   hindiMil: 17, hindisil: 10, urdu: 15, english: 21, sanskrit: 10, 
-  biology: 5, chemistry: 5, physics: 4, history: 5, politicalscience: 5, economics: 4, geography: 6,
+    math: 15,
+    hindimil: 17,
+    hindisil: 10,
+    urdu: 15,
+    english: 21,
+    sanskrit: 10,
+    biology: 5,
+    chemistry: 5,
+    physics: 4,
+    history: 5,
+    politicalscience: 5,
+    economics: 4,
+    geography: 6,
   };
 
+  // हर section के लिए content
   const content = {
     objective: {
-       math: {
-        ch1: "bas thora intezaar karen",
-        ch2: "HINDI CHAPTER 2 ME AAPKA SWAGAT HAI।"
+      math: {
+        ch1: "बस थोड़ा इंतज़ार करें...",
+        ch2: "Objective Math Chapter 2 में आपका स्वागत है।"
+      }
     },
     subjective: {
       math: {
-        ch1: "hlo friends wait for loading...",
+        ch1: "Hello friends, loading हो रहा है..."
+      }
     },
     books: {
-       math: {
+      math: {
         ch1: "<img src='https://yourgithub.com/class11-hindi-book.jpg' width='200'><br>हिंदी किताब PDF नीचे से डाउनलोड करें।"
       }
     }
   };
 
+  // subject चुनने पर chapter बटन दिखाना
   function selectSubject(section, subject) {
+    if (!subjects[subject]) {
+      alert("इस विषय की जानकारी उपलब्ध नहीं है।");
+      return;
+    }
+
     const chapterDiv = document.getElementById(`${section}-chapters`);
     const contentDiv = document.getElementById(`${section}-content`);
     chapterDiv.innerHTML = "";
     contentDiv.innerHTML = "";
+
     for (let i = 1; i <= subjects[subject]; i++) {
       const btn = document.createElement("button");
+      btn.className = "chapter-btn";
       btn.textContent = `Chapter ${i}`;
       btn.onclick = () => showContent(section, subject, i);
       chapterDiv.appendChild(btn);
     }
   }
 
+  // chapter चुनने पर content और PDF लिंक दिखाना
   function showContent(section, subject, chapterNum) {
     const key = `ch${chapterNum}`;
     const data = content?.[section]?.[subject]?.[key];
     const text = data || "इस अध्याय का कंटेंट अभी उपलब्ध नहीं है।";
-    const downloadLink = `https://yourgithub.com/class12-${subject}-ch${chapterNum}-${section}.pdf`;
+    const downloadLink = `https://yourgithub.com/class11-${subject}-ch${chapterNum}-${section}.pdf`;
+
     const contentDiv = document.getElementById(`${section}-content`);
     contentDiv.innerHTML = `
-      <div style="background:#eef; padding:15px; border-radius:5px;">
+      <div class="content-box">
         <p><strong>${capitalize(subject)} Chapter ${chapterNum} (${capitalize(section)}):</strong></p>
         <div>${text}</div>
-        <div style="margin-top:10px; background:#dff0d8; padding:10px; border-radius:5px;">
-          <a href="${downloadLink}" target="_blank">📥 Download PDF</a>
+        <div class="download-card">
+          <a href="${downloadLink}" target="_blank">📥 PDF डाउनलोड करें</a>
         </div>
       </div>
     `;
   }
 
+  // पहला अक्षर कैपिटल करने के लिए
   function capitalize(text) {
     return text.charAt(0).toUpperCase() + text.slice(1);
   }
@@ -256,5 +282,6 @@
 </body>
 
 </html>
+
 
 
