@@ -208,7 +208,7 @@
     },
     books: {
       math: {
-        ch1: "<img src='https://yourgithub.com/class12-hindi-book.jpg' width='200'><br>हिंदी किताब PDF नीचे से डाउनलोड करें।"
+        ch1: "<img src='https://github.com/class12-hindi-book.jpg' width='200'><br>हिंदी किताब PDF नीचे से डाउनलोड करें।"
       }
     }
   };
@@ -235,23 +235,25 @@
   }
 
   // chapter चुनने पर content और PDF लिंक दिखाना
-  function showContent(section, subject, chapterNum) {
-    const key = `ch${chapterNum}`;
-    const data = content?.[section]?.[subject]?.[key];
-    const text = data || "इस अध्याय का PDF निचे दिए गए लिंक से Download करें ।";
-    const downloadLink = `https://yourgithub.com/class12-${subject}-ch${chapterNum}-${section}.pdf`;
+function showContent(section, subject, chapterNum) {
+  const key = `ch${chapterNum}`;
+  const data = content?.[section]?.[subject]?.[key];
+  const text = data || "इस अध्याय का PDF नीचे दिए गए लिंक से Download करें ।";
 
-    const contentDiv = document.getElementById(`${section}-content`);
-    contentDiv.innerHTML = `
-      <div class="content-box">
-        <p><strong>${capitalize(subject)} Chapter ${chapterNum} (${capitalize(section)}):</strong></p>
-        <div>${text}</div>
-        <div class="download-card">
-          <a href="${downloadLink}" target="_blank">📥 PDF डाउनलोड करें</a>
-        </div>
+  // ✅ Raw GitHub PDF link auto generate
+  const downloadLink = `https://raw.githubusercontent.com/pyarifatma123-commits/study-for-bihar/main/pdfs/class12-${subject}-ch${chapterNum}-${section}.pdf`;
+
+  const contentDiv = document.getElementById(`${section}-content`);
+  contentDiv.innerHTML = `
+    <div class="content-box">
+      <p><strong>${capitalize(subject)} Chapter ${chapterNum} (${capitalize(section)}):</strong></p>
+      <div>${text}</div>
+      <div class="download-card">
+        <a href="${downloadLink}" target="_blank">📥 PDF डाउनलोड करें</a>
       </div>
-    `;
-  }
+    </div>
+  `;
+}
 
   // पहला अक्षर कैपिटल करने के लिए
   function capitalize(text) {
@@ -282,3 +284,4 @@
 
 
 </html>
+
