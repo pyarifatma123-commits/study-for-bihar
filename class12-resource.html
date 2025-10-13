@@ -238,7 +238,7 @@
   function showContent(section, subject, chapterNum) {
     const key = `ch${chapterNum}`;
     const data = content?.[section]?.[subject]?.[key];
-    const text = data || "इस अध्याय का कंटेंट अभी उपलब्ध नहीं है।";
+    const text = data || "इस अध्याय का PDF निचे दिए गए लिंक से Download करें ।";
     const downloadLink = `https://yourgithub.com/class12-${subject}-ch${chapterNum}-${section}.pdf`;
 
     const contentDiv = document.getElementById(`${section}-content`);
@@ -279,5 +279,6 @@
 </section>
 
 </body>
+
 
 </html>
