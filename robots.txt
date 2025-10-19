@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pyarifatma123-commits.github.io/study-for-bihar/sitemap.xml
