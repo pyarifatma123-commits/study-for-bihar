@@ -184,14 +184,14 @@
   const content = {
     objective: {
       hindi: {
-        ch1: "aaplogo ko bahut jald chapter ka objective milega abhi kaam chal raha।",
-        ch2: "HINDI CHAPTER 2 ME AAPKA SWAGAT HAI।"
+        ch1: "इस अध्याय का PDF नीचे दिए गए लिंक से Download करें।",
+        ch2: "इस अध्याय का PDF नीचे दिए गए लिंक से Download करें।"
         // बाकी chapters इसी format में जोड़ो
       }
     },
     subjective: {
       hindi: {
-        ch1: "यहाँ हिंदी Subjective Chapter 1 का content होगा।"
+        ch1: "इस अध्याय का PDF नीचे दिए गए लिंक से Download करें।"
       }
     },
     books: {
@@ -217,8 +217,8 @@
   function showContent(section, subject, chapterNum) {
     const key = `ch${chapterNum}`;
     const data = content?.[section]?.[subject]?.[key];
-    const text = data || "इस अध्याय का कंटेंट अभी उपलब्ध नहीं है।";
-    const downloadLink = `https://pyarifatma123-commits.github.io/study-for-bihar/class9-${subject}-ch${chapterNum}-${section}.pdf`;
+    const text = data || "इस अध्याय का PDF नीचे दिए गए लिंक से Download करें।";
+    const downloadLink = `https://pyarifatma123-commits.github.io/study-for-bihar/class10-${subject}-ch${chapterNum}-${section}.pdf`;
     const contentDiv = document.getElementById(`${section}-content`);
     contentDiv.innerHTML = `
       <div style="background:#eef; padding:15px; border-radius:5px;">
@@ -257,4 +257,5 @@
   </p>
 
 </section>
+
 
