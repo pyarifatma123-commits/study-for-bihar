@@ -218,7 +218,7 @@
     const key = `ch${chapterNum}`;
     const data = content?.[section]?.[subject]?.[key];
     const text = data || "इस अध्याय का PDF नीचे दिए गए लिंक से Download करें।";
-    const downloadLink = `https://pyarifatma123-commits.github.io/study-for-bihar/class10-${subject}-ch${chapterNum}-${section}.pdf`;
+    const downloadLink = `https://pyarifatma123-commits.github.io/study-for-bihar/pdfs/class10-${subject}-ch${chapterNum}-${section}.pdf`;
     const contentDiv = document.getElementById(`${section}-content`);
     contentDiv.innerHTML = `
       <div style="background:#eef; padding:15px; border-radius:5px;">
@@ -257,5 +257,6 @@
   </p>
 
 </section>
+
 
 
