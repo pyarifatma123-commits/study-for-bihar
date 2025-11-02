@@ -20,6 +20,8 @@
   <label>स्टेटस:</label><br>
   <select name="status" required>
     <option value="Student">Student</option>
+    <option value="Housewife">Houswife</option>
+    <option value="Buisnessman">Buisnessman</option>
     <option value="Teacher">Teacher</option>
     <option value="Other">Other</option>
   </select><br><br>
@@ -43,4 +45,64 @@
       })
       .catch(error => response.innerHTML = "❌ कुछ गड़बड़ हो गई, कृपया फिर से प्रयास करें।");
   });
+
 </script>
+
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+    color: #333;
+  }
+
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    text-align: center;
+    color: #007bff;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  button:hover {
+    background: #218838;
+  }
+
+  #response {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+</style>
