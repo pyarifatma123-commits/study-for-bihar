@@ -1,0 +1,46 @@
+<form name="submit-to-google-sheet">
+  <h2>ऑनलाइन पैसा कमाना सीखें</h2>
+
+  <label>नाम:</label><br>
+  <input type="text" name="name" required><br><br>
+
+  <label>लिंग:</label><br>
+  <select name="gender" required>
+    <option value="Male">पुरुष</option>
+    <option value="Female">महिला</option>
+    <option value="Other">अन्य</option>
+  </select><br><br>
+
+  <label>राज्य:</label><br>
+  <input type="text" name="state" required><br><br>
+
+  <label>मोबाइल नंबर:</label><br>
+  <input type="tel" name="mobile" required><br><br>
+
+  <label>स्टेटस:</label><br>
+  <select name="status" required>
+    <option value="Student">Student</option>
+    <option value="Teacher">Teacher</option>
+    <option value="Other">Other</option>
+  </select><br><br>
+
+  <button type="submit">सबमिट करें</button>
+</form>
+
+<p id="response"></p>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzr6yBWsm32cxsyKFILATvIsFL5Y4rAseicpb44X_VbjOD96qMI1z_y9_Bt0PCcGx7J/exec';
+  const form = document.forms['submit-to-google-sheet'];
+  const response = document.getElementById('response');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(res => {
+        form.reset();
+        response.innerHTML = "✅ आपका डेटा सफलतापूर्वक भेज दिया गया!";
+      })
+      .catch(error => response.innerHTML = "❌ कुछ गड़बड़ हो गई, कृपया फिर से प्रयास करें।");
+  });
+</script>
