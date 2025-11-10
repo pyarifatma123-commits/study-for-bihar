@@ -206,12 +206,6 @@ footer .social-icons img:hover {
   transform: scale(1.2);
 }
 
-.top-banner {
-  background: linear-gradient(to right, #00d084, #444ce7);
-  padding: 20px;
-  text-align: center;
-}
-
 .top-banner h2 {
   background: linear-gradient(to right, #00d084, #444ce7);
   color: white;
@@ -338,5 +332,6 @@ footer .social-icons img:hover {
     display: block;
   }
 }
+
 
 
