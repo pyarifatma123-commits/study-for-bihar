@@ -163,4 +163,47 @@ footer {
 .table-link:hover {
   background-color: #2e3b4e;
 }
+.join-group {
+  background-color: #e0f7fa;
+  text-align: center;
+  padding: 30px;
+  border-top: 2px solid #00d084;
+}
+
+.join-group h2 {
+  color: #101828;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.join-group p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.join-group .cta-button {
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+footer .social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+footer .social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2);
+}
+
 
