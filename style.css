@@ -205,5 +205,48 @@ footer .social-icons img {
 footer .social-icons img:hover {
   transform: scale(1.2);
 }
+.search-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #fefefe;
+}
+
+#searchInput {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #444ce7;
+  border-radius: 5px;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.category-buttons button {
+  padding: 10px 15px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #101828;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.category-buttons button:hover {
+  background-color: #444ce7;
+}
+
+#updateResults {
+  padding: 20px;
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+}
 
 
