@@ -206,37 +206,37 @@ footer .social-icons img:hover {
   transform: scale(1.2);
 }
 
-.top-banner h2 {
+.top-banner {
   background: linear-gradient(to right, #00d084, #444ce7);
-  color: white;
+  padding: 60px 20px;
   text-align: center;
-  padding: 20px;
-  font-size: 22px;
-  font-weight: bold;
-  margin: 0;
+}
+
+.top-banner h2 {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 15px;
 }
 
 .search-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 10px;
-  background: linear-gradient(to right, #00d084, #444ce7); /* Same as heading */
-  padding: 20px;
+  margin-top: 10px;
 }
 
 #searchInput {
-  padding: 10px;
-  font-size: 16px;
-  width: 70%;
-  border: 2px solid #444ce7;
+  padding: 8px;
+  font-size: 15px;
+  width: 55%;
   border-radius: 5px;
+  border: 2px solid #444ce7;
 }
 
 .search-section button {
-  padding: 10px 15px;
-  font-size: 20px;
+  padding: 8px 12px;
+  font-size: 18px;
   background-color: white;
   color: #00d084;
   border: none;
@@ -246,30 +246,20 @@ footer .social-icons img:hover {
 
 .category-buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Mobile default */
-  gap: 15px;
-  padding: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
 
 @media screen and (min-width: 768px) {
   .category-buttons {
-    grid-template-columns: repeat(4, 1fr); /* Desktop layout */
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .category-buttons .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px; /* Equal height */
-  width: 140px; /* Fixed width for uniformity */
-  text-align: center;
-  border-radius: 6px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  transition: transform 0.2s ease;
+  height: 45px;
+  font-size: 15px;
+  width: 100%;
 }
 
 .btn-blue { background-color: #007bff; }
@@ -367,10 +357,10 @@ footer .social-icons img:hover {
 
 .button-wrapper {
   background-color: white;
-  padding: 30px 20px;
+  padding: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  margin: -40px auto 20px auto; /* ऊपर overlap करने के लिए negative margin */
-  max-width: 1000px;
+  margin: -80px auto 20px auto; /* ज्यादा overlap */
+  max-width: 900px;
   border-radius: 12px;
   z-index: 2;
   position: relative;
