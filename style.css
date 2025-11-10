@@ -251,12 +251,10 @@ footer .social-icons img:hover {
   padding: 20px;
 }
 
-.category-buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  justify-content: center;
-  padding: 20px;
+@media screen and (min-width: 768px) {
+  .category-buttons {
+    grid-template-columns: repeat(4, 1fr); /* Desktop layout */
+  }
 }
 
 .category-buttons .btn {
@@ -340,15 +338,6 @@ footer .social-icons img:hover {
   }
 }
 
-.button-wrapper {
-  background-color: white;
-  padding: 30px 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  margin: 20px auto;
-  max-width: 1000px;
-  border-radius: 8px;
-}
-
 .category-buttons .btn {
   display: flex;
   align-items: center;
@@ -386,5 +375,6 @@ footer .social-icons img:hover {
   z-index: 2;
   position: relative;
 }
+
 
 
