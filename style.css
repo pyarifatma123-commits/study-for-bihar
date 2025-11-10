@@ -219,9 +219,10 @@ footer .social-icons img:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding: 20px;
   flex-wrap: wrap;
+  gap: 10px;
+  background: linear-gradient(to right, #00d084, #444ce7); /* Same as heading */
+  padding: 20px;
 }
 
 #searchInput {
@@ -234,9 +235,9 @@ footer .social-icons img:hover {
 
 .search-section button {
   padding: 10px 15px;
-  font-size: 16px;
-  background-color: #00d084;
-  color: white;
+  font-size: 20px;
+  background-color: white;
+  color: #00d084;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -350,4 +351,12 @@ footer .social-icons img:hover {
 
 .category-grid a:hover {
   transform: scale(1.05);
+}
+.category-buttons .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px; /* Equal height */
+  min-width: 140px;
+  text-align: center;
 }
