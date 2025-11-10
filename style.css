@@ -245,10 +245,10 @@ footer .social-icons img:hover {
 }
 
 .category-buttons {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
   justify-content: center;
-  gap: 12px;
   padding: 20px;
 }
 
@@ -333,5 +333,40 @@ footer .social-icons img:hover {
   }
 }
 
+.button-wrapper {
+  background-color: white;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 8px;
+}
+
+.category-buttons .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.category-buttons .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  opacity: 0.95;
+}
+
+.category-buttons .btn:active {
+  transform: scale(0.98);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
 
 
