@@ -26,19 +26,24 @@
   <input type="text" id="searchInput" placeholder="यहाँ टाइप करें जैसे 'बिहार बोर्ड'..." onkeyup="filterUpdates()" />
 </section>
 
-<section class="category-buttons">
-  <button>🔔 ताज़ा अपडेट्स</button>
-  <button>🏛️ नई सरकारी योजनाएं</button>
-  <button>🏫 बिहार बोर्ड अपडेट</button>
-  <button>🎟️ प्रवेश पत्र</button>
-  <button>🎓 छात्रवृत्ति से जुड़ी खबरें</button>
-  <button>🎯 विश्वविद्यालय से संबंधित अपडेट</button>
-  <button>💼 नवीनतम नौकरी अपडेट</button>
-  <button>🧾 परीक्षा परिणाम</button>
+<section class="top-banner">
+  <h2>📘 बिहार बोर्ड की पढ़ाई अब आसान और मुफ्त!</h2>
 </section>
 
-<section id="updateResults">
-  <!-- Search results will appear here -->
+<section class="search-section">
+  <input type="text" id="searchInput" placeholder="यहाँ टाइप करें जैसे 'बिहार बोर्ड रिजल्ट'" />
+  <button onclick="filterUpdates()">🔍 खोजें</button>
+</section>
+
+<section class="category-buttons">
+  <a href="latest.html" class="btn btn-blue">🔔 ताज़ा अपडेट्स</a>
+  <a href="schemes.html" class="btn btn-purple">🏛️ सरकारी योजनाएं</a>
+  <a href="bseb.html" class="btn btn-orange">🏫 बिहार बोर्ड अपडेट</a>
+  <a href="admit.html" class="btn btn-red">🎟️ प्रवेश पत्र</a>
+  <a href="scholarship.html" class="btn btn-green">🎓 छात्रवृत्ति</a>
+  <a href="university.html" class="btn btn-cyan">🎯 विश्वविद्यालय अपडेट</a>
+  <a href="jobs.html" class="btn btn-yellow">💼 नौकरी अपडेट</a>
+  <a href="results.html" class="btn btn-pink">🧾 परीक्षा परिणाम</a>
 </section>
 
   <section class="join-group">
@@ -95,6 +100,7 @@
   </body>
 
 </html>
+
 
 
 
