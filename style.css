@@ -256,7 +256,7 @@ footer .social-icons img:hover {
   align-items: center;
   justify-content: center;
   height: 50px; /* Equal height */
-  width: 140px; /* Fixed width for uniformity */
+  width: 160px; /* Fixed width for uniformity */
   text-align: center;
   border-radius: 6px;
   text-decoration: none;
@@ -331,3 +331,4 @@ footer .social-icons img:hover {
     display: block;
   }
 }
+
