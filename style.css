@@ -287,6 +287,20 @@ footer .social-icons img:hover {
   box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
 }
 
+.category-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mobile default: 2 buttons per row */
+  gap: 15px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .category-buttons {
+    grid-template-columns: repeat(4, 1fr); /* Desktop: 4 buttons per row */
+  }
+}
 .btn-blue { background-color: #007bff; }
 .btn-purple { background-color: #6f42c1; }
 .btn-orange { background-color: #fd7e14; }
@@ -379,6 +393,7 @@ footer .social-icons img:hover {
   transform: scale(0.98);
   box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
 }
+
 
 
 
