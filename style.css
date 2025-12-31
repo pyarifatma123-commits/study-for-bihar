@@ -380,17 +380,6 @@ footer .social-icons img:hover {
   box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.button-wrapper {
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  margin: -80px auto 20px auto; /* ज्यादा overlap */
-  max-width: 900px;
-  border-radius: 12px;
-  z-index: 2;
-  position: relative;
-}
-
 
 
 
