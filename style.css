@@ -394,6 +394,47 @@ footer .social-icons img:hover {
   box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
 }
 
+/* Social Join Buttons */
+.social-join-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mobile: 2 buttons side by side */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .social-join-buttons {
+    grid-template-columns: repeat(2, 1fr); /* Desktop: still 2 buttons side by side */
+    max-width: 400px;
+    margin: 20px auto 0 auto; /* center align */
+  }
+}
+
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-social.whatsapp {
+  background-color: #25D366;
+}
+
+.btn-social.telegram {
+  background-color: #0088cc;
+}
+
+.btn-social:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
 
 
 
