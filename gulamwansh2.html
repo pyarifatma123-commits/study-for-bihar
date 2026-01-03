@@ -147,6 +147,59 @@ padding:12px;display:flex;gap:10px;cursor:pointer
     text-align: center;
   }
 }
+
+/* ===== Feedback Section ===== */
+.simple-feedback{
+  max-width:760px;
+  margin:20px auto;
+  padding:12px;
+  border-top:1px dashed var(--border);
+}
+
+.feedback-note{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+
+.simple-feedback textarea{
+  width:100%;
+  min-height:60px;
+  resize:none;
+  padding:8px;
+  border-radius:8px;
+  background:var(--card);
+  border:1px solid var(--border);
+  color:var(--text);
+  font-size:13px;
+  margin-bottom:8px;
+}
+
+.feedback-btn{
+  padding:6px 14px;
+  font-size:13px;
+  border-radius:999px;
+  border:none;
+  background:var(--accent2);
+  color:#fff;
+  cursor:pointer;
+}
+
+#feedbackMsg{
+  margin-top:6px;
+  font-size:13px;
+  font-weight:600;
+}
+
+#feedbackMsg.success{
+  color:#22c55e; /* green */
+}
+
+#feedbackMsg.error{
+  color:#ef4444; /* red */
+}
+
+
 </style>
 </head>
 
@@ -457,7 +510,49 @@ function prev(){ if(current>0){current--;render();} }
 prevBtn.onclick=prev;
 nextBtn.onclick=next;
 render();
+
+function submitFeedback(){
+  const txt = document.getElementById("feedbackText");
+  const msg = document.getElementById("feedbackMsg");
+
+  msg.className = ""; // reset
+  msg.innerText = "";
+
+  if(txt.value.trim()===""){
+    msg.innerText = "❌ कृपया पहले feedback लिखें";
+    msg.classList.add("error");
+    return;
+  }
+
+  msg.innerText = "✅ धन्यवाद 🙏 आपका Feedback सफलतापूर्वक दर्ज हो गया है।";
+  msg.classList.add("success");
+
+  txt.value = "";
+}
+
 </script>
+
+<!-- ================= DISCLAIMER + FEEDBACK SECTION ================= -->
+
+<div class="simple-feedback">
+  <p class="feedback-note">
+    ⚠️ यदि इस Quiz में किसी भी प्रकार की त्रुटि (प्रश्न, उत्तर या विकल्प) हो,
+    तो उसके लिए क्षमाप्रार्थी हूँ।
+  </p>
+
+  <textarea id="feedbackText"
+    placeholder="यहाँ प्रश्न,उत्तर या विकल्प में हूए गलती / सुझाव लिखें..."
+  ></textarea>
+
+  <button onclick="submitFeedback()" class="feedback-btn">
+    Feedback Submit करें
+  </button>
+  <div id="feedbackMsg"></div>
+</div>
+
+
+<!-- ================= END DISCLAIMER ================= -->
+
 
 <footer class="edu-footer">
 
