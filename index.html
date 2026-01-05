@@ -61,8 +61,6 @@
 </body>
 </html>
 
-  <script src="script.js"></script>
-
 <section class="why-visit">
   <h2>🏆 आखिर क्यों लोग हमारी वेबसाइट विज़िट करें?</h2>
 
@@ -204,6 +202,41 @@
     <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Us</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="privacy.html">Privacy Policy</a></p>
   </div>
 </footer>
+ 
+<script src="script.js"></script>
+
+<script>
+function filterUpdates() {
+  const query = document.getElementById("searchInput").value.toLowerCase();
+  const bodyText = document.body.innerText.toLowerCase();
+
+  // पुराना result हटाओ
+  let oldMsg = document.getElementById("searchMsg");
+  if (oldMsg) oldMsg.remove();
+
+  let msg = document.createElement("div");
+  msg.id = "searchMsg";
+  msg.style.marginTop = "10px";
+  msg.style.fontWeight = "bold";
+
+  if (query.length === 0) {
+    msg.style.color = "red";
+    msg.innerText = "⚠️ कृपया कोई शब्द लिखें";
+  }
+  else if (bodyText.includes(query)) {
+    msg.style.color = "green";
+    msg.innerText = "✅ Result Found! यह शब्द पेज में मौजूद है";
+  } 
+  else {
+    msg.style.color = "red";
+    msg.innerText = "❌ No Result Found";
+  }
+
+  document.querySelector(".search-section").appendChild(msg);
+}
+</script>
+
   </body>
 </html>
+
 
