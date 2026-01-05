@@ -207,10 +207,43 @@
 
 <script>
 function filterUpdates() {
-  const query = document.getElementById("searchInput").value.toLowerCase();
-  const bodyText = document.body.innerText.toLowerCase();
+  const query = document.getElementById("searchInput").value.trim();
+  if (query === "") {
+    showMsg("⚠️ कृपया पहले कोई शब्द लिखें", "red");
+    return;
+  }
 
-  // पुराना result हटाओ
+  // पहले से highlight हटाओ
+  removeHighlights();
+
+  const bodyText = document.body.innerHTML;
+  const regex = new RegExp(`(${query})`, "gi");
+
+  if (!regex.test(bodyText)) {
+    showMsg("❌ No Result Found", "red");
+    return;
+  }
+
+  // Highlight + replace
+  document.body.innerHTML = bodyText.replace(
+    regex,
+    `<mark class="search-highlight">$1</mark>`
+  );
+
+  showMsg("✅ Result Found! आपको नीचे उस जगह ले जाया गया है", "green");
+
+  // Scroll to first highlight
+  const firstMatch = document.querySelector(".search-highlight");
+  if (firstMatch) {
+    firstMatch.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }
+}
+
+// Message दिखाने वाला function
+function showMsg(text, color) {
   let oldMsg = document.getElementById("searchMsg");
   if (oldMsg) oldMsg.remove();
 
@@ -218,25 +251,23 @@ function filterUpdates() {
   msg.id = "searchMsg";
   msg.style.marginTop = "10px";
   msg.style.fontWeight = "bold";
-
-  if (query.length === 0) {
-    msg.style.color = "red";
-    msg.innerText = "⚠️ कृपया कोई शब्द लिखें";
-  }
-  else if (bodyText.includes(query)) {
-    msg.style.color = "green";
-    msg.innerText = "✅ Result Found! यह शब्द पेज में मौजूद है";
-  } 
-  else {
-    msg.style.color = "red";
-    msg.innerText = "❌ No Result Found";
-  }
+  msg.style.color = color;
+  msg.innerText = text;
 
   document.querySelector(".search-section").appendChild(msg);
 }
+
+// Highlight हटाने वाला function
+function removeHighlights() {
+  document.querySelectorAll("mark.search-highlight").forEach(mark => {
+    mark.replaceWith(mark.innerText);
+  });
+}
 </script>
+
 
   </body>
 </html>
+
 
 
