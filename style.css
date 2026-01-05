@@ -320,6 +320,19 @@ footer .social-icons img:hover {
   position: relative;
 }
 
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.logo img{
+  width:34px;
+  height:34px;
+}
+
 .logo {
   font-size: 18px;
   font-weight: bold;
@@ -436,6 +449,16 @@ footer .social-icons img:hover {
   opacity: 0.9;
 }
 
+.about-section{
+  background:#ffffff;
+  max-width:900px;
+  margin:40px auto;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+
 .main-footer {
   background-color: #101828;
   color: white;
@@ -521,6 +544,5 @@ footer .social-icons img:hover {
 .footer-bottom a:hover {
   text-decoration: underline;
 }
-
 
 
