@@ -462,28 +462,28 @@ footer .social-icons img:hover {
 .main-footer {
   background-color: #101828;
   color: white;
-  padding: 40px 20px;
+  padding: 25px 20px;
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.4;
   font-family: 'Roboto', sans-serif;
 }
 
 .main-footer h3,
 .main-footer h4 {
   color: #00ffcc;
-  margin-bottom: 10px;
-  font-size: 18px;
+  margin-bottom: 6px;
+  font-size: 17px;
 }
 
 .main-footer p {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .footer-columns {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 30px;
+  gap: 18px;
+  margin-top: 20px;
 }
 
 .footer-columns div {
@@ -528,11 +528,11 @@ footer .social-icons img:hover {
 }
 
 .footer-bottom {
-  margin-top: 30px;
+  margin-top: 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
   border-top: 1px solid #444;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .footer-bottom a {
@@ -544,5 +544,6 @@ footer .social-icons img:hover {
 .footer-bottom a:hover {
   text-decoration: underline;
 }
+
 
 
