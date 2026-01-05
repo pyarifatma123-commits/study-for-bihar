@@ -546,6 +546,13 @@ footer .social-icons img:hover {
   text-decoration: underline;
 }
 
+.search-highlight {
+  background: yellow;
+  color: black;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
 
 
 
