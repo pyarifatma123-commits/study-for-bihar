@@ -410,9 +410,10 @@ footer .social-icons img:hover {
 /* Social Join Buttons */
 .social-join-buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Mobile: 2 buttons side by side */
-  gap: 15px;
-  margin-top: 20px;
+  grid-template-columns: 1fr;   /* 👈 एक के नीचे एक */
+  gap: 12px;
+  max-width: 420px;
+  margin: 20px auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -462,9 +463,9 @@ footer .social-icons img:hover {
 .main-footer {
   background-color: #101828;
   color: white;
-  padding: 25px 20px;
+  padding: 15px 20px;
   font-size: 15px;
-  line-height: 1.4;
+  line-height: 1.25;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -476,13 +477,13 @@ footer .social-icons img:hover {
 }
 
 .main-footer p {
-  margin-bottom: 6px;
+  margin-bottom: 3px;
 }
 
 .footer-columns {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 10px;
   margin-top: 20px;
 }
 
@@ -544,6 +545,7 @@ footer .social-icons img:hover {
 .footer-bottom a:hover {
   text-decoration: underline;
 }
+
 
 
 
